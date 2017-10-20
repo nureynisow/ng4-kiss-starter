@@ -4,6 +4,7 @@
   "description": "Very simple and stupid angular 4 starter for newbies. With webpack",
   "scripts": {
     "build": "webpack",
+    "watch": "webpack --watch",
     "dev": "webpack-dev-server --progress --port 9191",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,9 +24,13 @@
     "@angular/core": "^4.4.6",
     "@angular/platform-browser": "^4.4.6",
     "@angular/platform-browser-dynamic": "^4.4.6",
+    "@angular/router": "^4.4.6",
     "@types/node": "^8.0.45",
+    "angular2-router-loader": "^0.3.5",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.2.3",
+    "core-js": "^2.5.1",
+    "es6-promise": "^4.1.1",
     "html-webpack-plugin": "^2.30.1",
     "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.10",
