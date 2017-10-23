@@ -16,7 +16,7 @@ const routes: Routes = [
 @NgModule( {
 	imports: [
 		BrowserModule,
-		RouterModule.forRoot( routes )
+		RouterModule.forRoot( routes, {initialNavigation: 'legacy_disabled'} )
 	],
 	declarations: [ AppComponent, MenuComponent ],
 	providers: [

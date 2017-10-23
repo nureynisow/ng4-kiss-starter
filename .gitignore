@@ -1,3 +1,4 @@
 node_modules/
 dist/
 /ng4-kiss-starter.iml
+.idea
