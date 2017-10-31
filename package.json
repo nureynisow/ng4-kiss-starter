@@ -6,7 +6,7 @@
 		"build": "webpack",
 		"watch": "webpack --watch",
 		"dev": "webpack-dev-server --progress --port 9191",
-		"lint": "tslint 'src/**/*.ts' || true",
+		"lint": "tslint 'src/**/*.ts'",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"postinstall": "./bin/setup-git-hooks"
 	},
