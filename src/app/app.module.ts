@@ -10,6 +10,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 const routes: Routes = [
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
 	{path: 'home', loadChildren: './home/home.module#HomeModule'},
+	{path: 'login', loadChildren: './login/login.module#LoginModule'},
 	{path: '404', component: NotfoundComponent},
 	{path: '**', redirectTo: '404'},
 

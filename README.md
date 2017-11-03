@@ -6,3 +6,5 @@ Complete and simple starter kit for Angular 4 using Webpack
 # TODO 
 1. setup hooks on post install
 2. hash webpack on prod env
+3. Uglify minification
+4. Dont load all RxJs
