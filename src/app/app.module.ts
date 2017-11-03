@@ -1,30 +1,27 @@
 import { NgModule } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 // imports from app
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
-import { APP_BASE_HREF } from '@angular/common';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 const routes: Routes = [
-	{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-	{path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule'},
-	{path: 'login', loadChildren: './login/login.module#LoginModule'}
+	{path: '', redirectTo: 'home', pathMatch: 'full'},
+	{path: 'home', loadChildren: './home/home.module#HomeModule'},
+	{path: '404', component: NotfoundComponent},
+	{path: '**', redirectTo: '404'},
+
 ];
 
 @NgModule( {
 	imports: [
 		BrowserModule,
-		RouterModule.forRoot( routes, {initialNavigation: 'legacy_disabled'} )
+		RouterModule.forRoot( routes )
 	],
-	declarations: [ AppComponent, MenuComponent ],
-	providers: [
-		{
-			provide: APP_BASE_HREF,
-			useValue: '/ng4'
-		}
-	],
+	declarations: [ AppComponent, NotfoundComponent ],
+	providers: [ {provide: APP_BASE_HREF, useValue: '/'} ],
 	bootstrap: [ AppComponent ]
 } )
 export class AppModule {

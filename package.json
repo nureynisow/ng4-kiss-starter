@@ -5,8 +5,9 @@
 	"scripts": {
 		"build": "webpack",
 		"watch": "webpack --watch",
-		"dev": "webpack-dev-server --progress --port 9191",
+		"dev": "webpack-dev-server --progress",
 		"lint": "tslint 'src/**/*.ts'",
+		"clean": "rm -rf node_modules dist",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"postinstall": "./bin/setup-git-hooks"
 	},
@@ -41,6 +42,7 @@
 		"reflect-metadata": "^0.1.10",
 		"rxjs": "^5.5.0",
 		"tslint": "^5.8.0",
+		"tslint-loader": "^3.5.3",
 		"webpack": "^3.8.1",
 		"zone.js": "^0.8.18"
 	},

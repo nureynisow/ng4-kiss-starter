@@ -16,8 +16,9 @@ module.exports = function () {
 
 	config.output = {
 		path: root('../dist'),
+		publicPath: '/',
 		filename: 'js/[name].js',
-		publicPath: '/ng4/'
+		chunkFilename: '[id].chunk.js'
 	};
 
 	config.module = {
@@ -29,6 +30,11 @@ module.exports = function () {
 			},
 			{
 				test: /\.ts$/,
+				enforce: 'pre',
+				loader: 'tslint-loader'
+			},
+			{
+				test: /\.ts$/,
 				use: ['awesome-typescript-loader', 'angular2-template-loader', 'angular2-router-loader'],
 				exclude: /node_modules/
 			}
@@ -37,7 +43,9 @@ module.exports = function () {
 
 	config.plugins = [
 		new HtmlWebpackPlugin({
-			template: 'src/index.html',
+			template: './src/index.html',
+			filename: 'index.html',
+			inject: 'body',
 			chunksSortMode: 'dependency'
 		}),
 		new webpack.ContextReplacementPlugin(
@@ -51,6 +59,18 @@ module.exports = function () {
 
 	config.resolve = {
 		extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
+	};
+
+	config.devServer = {
+		port: 9191,
+		historyApiFallback: true,
+		open: true,
+		proxy: {
+			"/api": {
+				target: "http://localhost:8080",
+				pathRewrite: {"^/api": ""}
+			}
+		}
 	};
 
 	return config;

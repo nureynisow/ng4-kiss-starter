@@ -1,3 +1,4 @@
+![dependencies](https://david-dm.org/nureynisow/ng4-kiss-starter.svg)
 [![Build Status](https://circleci.com/gh/nureynisow/ng4-kiss-starter.svg?style=shield)](https://circleci.com/gh/nureynisow/ng4-kiss-starter)
 [![license](https://img.shields.io/github/license/neo9/n9-node-micro.svg)](https://github.com/nureynisow/ng4-kiss-starter/blob/master/LICENSE)
 # Angular4 starter kit with Webpack
