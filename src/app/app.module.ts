@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // imports from app
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import {MenuComponent} from "./component/menu/menu.component";
 
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
 		BrowserModule,
 		RouterModule.forRoot( routes )
 	],
-	declarations: [ AppComponent, NotfoundComponent ],
+	declarations: [ AppComponent, NotfoundComponent, MenuComponent ],
 	providers: [ {provide: APP_BASE_HREF, useValue: '/'} ],
 	bootstrap: [ AppComponent ]
 } )
