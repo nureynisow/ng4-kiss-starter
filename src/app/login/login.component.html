@@ -1,7 +1,6 @@
 <div id="login">
 	<aside class="login-panel text-center">
-		<img class="logo"
-						src="https://assets-aone-valid.neo9-solutions.eu/E/C/4/C/EC4C1F4708A7CC86467D8823D3506772.png">
+		<img class="logo" src="../login/img/angular.png">
 		<h1 class="text-center" [innerHtml]="'login.title' | translate"></h1>
 		<form novalidate [formGroup]="loginForm">
 			<mat-form-field>
@@ -14,7 +13,8 @@
 			<button type="submit" mat-raised-button color="primary" (click)="submitLoginForm()">Connexion</button>
 		</form>
 		<div class="bottom">
-			<a>{{'login.lost' | translate}}</a>
+			<a>{{'login.lost' | translate}}</a><br>
+			with love by <a href="mailto:nureynisow@gmail.com"><u>nureynisow</u></a>
 		</div>
 	</aside>
 </div>

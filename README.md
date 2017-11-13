@@ -9,3 +9,6 @@ Complete and simple starter kit for Angular 5 using Webpack, TypeScript and Mate
 3. Uglify minification
 4. Dont load all RxJs (webpack and vendor)
 5. Dont load all lodash (webpack and vendor)
+
+# Demo
+You can check a demo here : [ng5-starter-kit.surge.sh](http://ng5-starter-kit.surge.sh)
