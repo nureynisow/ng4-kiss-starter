@@ -63,7 +63,7 @@ module.exports = function () {
 				use: [
 					{loader: 'file-loader?name=img/[name].[hash].[ext]?'}
 				]
-			},
+			}
 		]
 	};
 
@@ -75,7 +75,7 @@ module.exports = function () {
 			chunksSortMode: 'dependency'
 		}),
 		new webpack.ContextReplacementPlugin(
-			/angular(\\|\/)core(\\|\/)@angular/,
+			/angular(\\|\/)core(\\|\/)/,
 			root('./src')
 		),
 		new webpack.optimize.CommonsChunkPlugin({
