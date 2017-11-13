@@ -1,0 +1,8 @@
+//@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import 'components/scss/material/gps-theme';
+// import custom component scss
+@import "login/login.component";
+
+body {
+	margin: 0;
+}

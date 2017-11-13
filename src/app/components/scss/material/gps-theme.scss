@@ -1,0 +1,83 @@
+@import '~@angular/material/theming';
+@import '../variables';
+
+$custom-typo: mat-typography-config(
+				$font-family: "Open Sans",
+				$body-1: mat-typography-level(14px, 24px, 400),
+				$input: mat-typography-level(24px, 1.125, 400)
+);
+@include mat-core($custom-typo);
+
+$gps-green-palette: (
+				50 : #f4f8e0,
+				100 : #e4edb3,
+				200 : #d2e280,
+				300 : #c0d64d,
+				400 : #b3cd26,
+				500 : #a5c400,
+				600 : #9dbe00,
+				700 : #93b600,
+				800 : #8aaf00,
+				900 : #79a200,
+				A100 : #f0ffcc,
+				A200 : #e1ff99,
+				A400 : #d2ff66,
+				A700 : #cbff4d,
+				contrast: (
+								50 : #000000,
+								100 : #000000,
+								200 : #000000,
+								300 : #000000,
+								400 : #000000,
+								500 : #000000,
+								600 : #000000,
+								700 : #000000,
+								800 : #000000,
+								900 : #000000,
+								A100 : #000000,
+								A200 : #000000,
+								A400 : #000000,
+								A700 : #000000,
+				)
+);
+
+$gps-orange-palette: (
+				50 : #fdf2e4,
+				100 : #fbdebc,
+				200 : #f9c890,
+				300 : #f6b263,
+				400 : #f4a241,
+				500 : #f29120,
+				600 : #f0891c,
+				700 : #ee7e18,
+				800 : #ec7413,
+				900 : #e8620b,
+				A100 : #ffffff,
+				A200 : #ffeae0,
+				A400 : #ffc9ad,
+				A700 : #ffb893,
+				contrast: (
+								50 : #000000,
+								100 : #000000,
+								200 : #000000,
+								300 : #000000,
+								400 : #000000,
+								500 : #000000,
+								600 : #000000,
+								700 : #000000,
+								800 : #000000,
+								900 : #000000,
+								A100 : #000000,
+								A200 : #000000,
+								A400 : #000000,
+								A700 : #000000,
+				)
+);
+
+$gps-theme-primary: mat-palette($gps-orange-palette);
+$gps-theme-accent: mat-palette($gps-green-palette, 500, 600, 700);
+$gps-theme-warn: mat-palette($mat-red);
+
+$custom-theme: mat-dark-theme($gps-theme-primary, $gps-theme-accent, $gps-theme-warn);
+
+@include angular-material-theme($custom-theme);

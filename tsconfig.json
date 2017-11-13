@@ -9,6 +9,6 @@
 		"lib": ["es2015", "dom"],
 		"noImplicitAny": false,
 		"skipLibCheck": true,
-		"types": ["core-js", "node", "lodash"]
+		"types": ["core-js", "jasmine", "node", "lodash"]
 	}
 }
