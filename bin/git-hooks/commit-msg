@@ -21,6 +21,8 @@ var firstLine = function (str) {
 
 var commitMsgFile = process.argv[2];
 
+console.log(commitMsgFile);
+
 fs.readFile(commitMsgFile, function (err, buffer) {
 	var msg = firstLine(buffer.toString());
 
