@@ -1,18 +1,19 @@
 <div id="login">
 	<aside class="login-panel text-center">
-		<img class="logo" src="https://assets-aone-valid.neo9-solutions.eu/E/C/4/C/EC4C1F4708A7CC86467D8823D3506772.png">
-		<h1 class="text-center">Welcome to the <b>global provider system</b></h1>
+		<img class="logo"
+			 src="https://assets-aone-valid.neo9-solutions.eu/E/C/4/C/EC4C1F4708A7CC86467D8823D3506772.png">
+		<h1 class="text-center" [innerHtml]="'login.title' | translate"></h1>
 		<form>
 			<mat-form-field>
-				<input matInput type="text" placeholder="{{'login.form.id.placeholder' | translate}}">
+				<input matInput type="text" placeholder="{{'login.id.placeholder' | translate}}">
 			</mat-form-field>
 			<mat-form-field>
-				<input matInput type="text" placeholder="{{'login.form.pwd.placeholder'}}">
+				<input matInput type="text" placeholder="{{'login.pwd.placeholder' | translate}}">
 			</mat-form-field>
+			<button type="submit" mat-raised-button color="primary">Connexion</button>
 		</form>
 		<div class="bottom">
-			<a class="small trk-forgotpwd" ui-sref="forgotten-ids" href="/loginmdp-perdus">identifiant ou mot de passe perdu
-				?</a>
+			<a>{{'login.lost' | translate}}</a>
 		</div>
 	</aside>
 </div>

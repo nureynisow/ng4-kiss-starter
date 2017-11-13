@@ -1,5 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import {MatButtonModule} from '@angular/material/button';
 
 
 /**
@@ -7,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
  */
 @NgModule( {
 	imports: [
-		TranslateModule,
+		TranslateModule
 	],
 	exports: [ TranslateModule ]
 } )

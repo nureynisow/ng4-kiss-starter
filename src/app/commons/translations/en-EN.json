@@ -1,3 +1,13 @@
 {
-	"app": "A simple Angular 5 starter kit with Webpack - Typescript - Material Design"
+	"app": "A simple Angular 5 starter kit with Webpack - Typescript - Material Design",
+  "login": {
+    "title": "Welcome to the <b>global provider system</b>",
+    "id": {
+      "placeholder": "Login"
+    },
+    "pwd": {
+      "placeholder": "Password"
+    },
+    "lost": "Login or password lost ?"
+  }
 }
