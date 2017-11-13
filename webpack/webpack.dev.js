@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = function () {
@@ -82,6 +83,12 @@ module.exports = function () {
 			name: ['polyfills']
 			// TODO name: ['app','vendor','polyfills']
 		}),
+		new CopyWebpackPlugin([
+			{context: 'src/app', from: "**/*.+(png|jpeg|jpg|gif|ico|svg|csv)"}
+		]),
+		new CopyWebpackPlugin([
+			{context: 'src/app', from: "commons/translations", to: "translations"}
+		]),
 		new ExtractTextPlugin({
 			filename: "styles.css",
 			disable: false,

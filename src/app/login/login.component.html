@@ -4,14 +4,15 @@
 		<h1 class="text-center">Welcome to the <b>global provider system</b></h1>
 		<form>
 			<mat-form-field>
-				<input matInput type="text" placeholder="{{'login.form.id.placeholder'}}">
+				<input matInput type="text" placeholder="{{'login.form.id.placeholder' | translate}}">
 			</mat-form-field>
 			<mat-form-field>
 				<input matInput type="text" placeholder="{{'login.form.pwd.placeholder'}}">
 			</mat-form-field>
 		</form>
 		<div class="bottom">
-			<a class="small trk-forgotpwd" ui-sref="forgotten-ids" href="/loginmdp-perdus">identifiant ou mot de passe perdu ?</a>
+			<a class="small trk-forgotpwd" ui-sref="forgotten-ids" href="/loginmdp-perdus">identifiant ou mot de passe perdu
+				?</a>
 		</div>
 	</aside>
 </div>

@@ -1,8 +1,9 @@
 #!/bin/sh
+
 echo "running tslint on all .ts files"
 ./node_modules/.bin/tslint -r node_modules/tslint/lib/rules 'app/**/*.ts'
 status=$?
 
-[ $status = 2 ] && echo "COMMIT CONTENT REJECTED" || echo "COMMIT CONTENT ACCEPTED"
+[ $status = 1 ] && echo "COMMIT CONTENT REJECTED" || echo "COMMIT CONTENT ACCEPTED"
 
 exit $status
