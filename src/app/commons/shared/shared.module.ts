@@ -1,6 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import {MatButtonModule} from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 /**
@@ -8,9 +9,12 @@ import {MatButtonModule} from '@angular/material/button';
  */
 @NgModule( {
 	imports: [
+		FormsModule,
+		ReactiveFormsModule,
+		CommonModule,
 		TranslateModule
 	],
-	exports: [ TranslateModule ]
+	exports: [ TranslateModule, ReactiveFormsModule ]
 } )
 export class SharedModule {
 	static forRoot (): ModuleWithProviders {
