@@ -1,7 +1,7 @@
 {
 	"app": "Un starter kit Angular 5 avec Webpack - Typescript - Material Design",
 	"login": {
-		"title": "Le starter kit <b>Angular 5</b>",
+		"title": "Bienvenue sur le <span class='font FontUbuntuBold'>Starter kit Angular 5 </span>",
 		"id": {
 			"placeholder": "Identifiant"
 		},

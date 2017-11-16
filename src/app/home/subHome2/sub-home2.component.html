@@ -1,0 +1,113 @@
+<div id="suppliers-form">
+	<div fxLayout="row" class="header background-green1-xs padding-sm-xs">
+		<div fxFlex="1 1 70%">
+			<h2 class="font FontUbuntuLight text-20-xs text-white-xs">{{'newSupplier.title' |translate}}</h2>
+		</div>
+		<div fxFlex="1 1 30%">
+			<div fxLayout="row">
+				<div fxFlex="1 1 50%" class="padding-right-sm-xs padding-left-sm-xs">
+					<button class="gps-button-plain background-green1-xs text-white-xs">{{'newSupplier.cancel' |translate}}</button>
+				</div>
+				<div fxFlex="1 1 50%" class="padding-right-sm-xs padding-left-sm-xs">
+					<button class="gps-button-plain background-white-xs text-green1-xs">{{'newSupplier.validate' |translate}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav mat-tab-nav-bar class="background-white-xs navbar">
+		<a mat-tab-link
+		   [routerLink]="home"
+		   routerLinkActive #rla="routerLinkActive"
+		   [active]="rla.isActive">
+			{{'newSupplier.tab1' |translate}}
+		</a>
+		<a mat-tab-link
+		   [routerLink]="home"
+		   routerLinkActive #rla="routerLinkActive"
+		   [active]="rla.isActive">
+			{{'newSupplier.tab2' |translate}}
+		</a>
+		<a mat-tab-link
+		   [routerLink]="home"
+		   routerLinkActive #rla="routerLinkActive"
+		   [active]="rla.isActive">
+			{{'newSupplier.tab3' |translate}}
+		</a>
+		<a mat-tab-link
+		   [routerLink]="home"
+		   routerLinkActive #rla="routerLinkActive"
+		   [active]="rla.isActive">
+			{{'newSupplier.tab4' |translate}}
+		</a>
+		<a mat-tab-link
+		   [routerLink]="home"
+		   routerLinkActive #rla="routerLinkActive"
+		   [active]="rla.isActive">
+			{{'newSupplier.tab4' |translate}}
+		</a>
+	</nav>
+	<form novalidate [formGroup]="supplierForm">
+		<div class="content background-grey2-xs padding-sm-xs">
+			<div id="presentation" class="margin-bottom-lg-xs">
+				<div fxLayout="row">
+					<div fxFlex="1 1 100%">
+						<h2 class="font FontUbuntuLight text-20-xs text-grey1-xs">{{'newSupplier.tab1' |translate}}</h2>
+						<h3 class="font FontUbuntuLight text-14-xs text-grey1-xs">Identification</h3>
+					</div>
+				</div>
+				<div fxLayout="row margin-top-md-xs">
+					<div fxFlex="1 1 50%" class="padding-right-md-xs">
+						<mat-form-field>
+							<input matInput class="text-grey1-xs" type="text" formControlName="name"
+								   placeholder="{{'newSupplier.presentation.name.placeholder' |translate}}">
+						</mat-form-field>
+						<mat-form-field>
+							<input matInput type="text" formControlName="description"
+								   placeholder="{{'newSupplier.presentation.description.placeholder' | translate}}">
+						</mat-form-field>
+						<div>
+							<label class="label">Priority Level</label><br>
+							<button class="preferred-btn background-grey2-xs">Preferred</button>
+							<button class="second-choice-btn background-grey2-xs">Second Choice</button>
+							<button class="black-listed-btn background-grey2-xs">Black Listed</button>
+						</div>
+						<mat-form-field>
+							<input matInput type="text" formControlName="tag"
+								   placeholder="{{'newSupplier.presentation.tag.placeholder' | translate}}">
+						</mat-form-field>
+					</div>
+					<div fxFlex="1 1 50%" class="padding-left-md-xs">
+						<mat-form-field>
+							<input matInput class="text-grey1-xs" type="text" formControlName="legalName"
+								   placeholder="{{'newSupplier.presentation.legalName.placeholder' |translate}}">
+						</mat-form-field>
+						<mat-form-field>
+							<input matInput type="text" formControlName="natId"
+								   placeholder="{{'newSupplier.presentation.nationalIdentification.placeholder' | translate}}">
+						</mat-form-field>
+						<div>
+							<label class="label">Classification</label><br>
+							<button class="simple-btn background-grey2-xs">Provider</button>
+							<button class="simple-btn background-grey2-xs">Agent</button>
+							<button class="simple-btn background-grey2-xs">Office</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="contact">
+				<div fxLayout="row">
+					<div fxFlex="1 1 100%">
+						<h2 class="font FontUbuntuLight text-20-xs text-grey1-xs">{{'newSupplier.tab2' |translate}}</h2>
+						<h3 class="font FontUbuntuLight text-14-xs text-grey1-xs">Supplier address</h3>
+					</div>
+				</div>
+				<div fxLayout="row margin-top-md-xs">
+					<div fxFlex="1 1 50%" class="padding-right-md-xs">
+					</div>
+					<div fxFlex="1 1 50%" class="padding-right-md-xs">
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

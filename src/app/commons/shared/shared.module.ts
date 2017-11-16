@@ -18,6 +18,6 @@ import { CommonModule } from '@angular/common';
 } )
 export class SharedModule {
 	static forRoot (): ModuleWithProviders {
-		return {ngModule: SharedModule}
+		return {ngModule: SharedModule};
 	}
 }

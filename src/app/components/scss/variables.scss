@@ -1,3 +1,27 @@
+// Colors
+$white: #fff;
+$black: #000;
+$white-transparent: hsla(0, 0%, 100%, 0.3);
 $grey1: #58585a;
+$grey2: #EEEEEE;
+$orange1: #F29120;
+$green1: #A5C400;
 
-$white: #FFFFFF;
+// Fonts
+$ubuntu-regular: 'ubunturegular', Helvetica, arial, sans-serif;
+$ubuntu-light: 'ubuntulight', Helvetica, arial, sans-serif;
+$ubuntu-bold: 'ubuntubold', Helvetica, arial, sans-serif;
+
+// Paddings
+$padding-xs: 10px;
+$padding-sm: 20px;
+$padding-md: 30px;
+$padding-lg: 40px;
+
+// Margins
+$margin-xxs: 3px;
+$margin-xs: 10px;
+$margin-sm: 20px;
+$margin-md: 30px;
+$margin-lg: 40px;
+$margin-xl: 60px;

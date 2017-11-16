@@ -1,0 +1,17 @@
+@import '../../components/scss/variables';
+@import '../../components/scss/material/gps-theme';
+
+#suppliers {
+	h2 {
+		text-transform: uppercase;
+		margin-top: 0;
+	}
+
+	.search {
+		height: calc(100vh - 40vh);
+	}
+
+	.lastViewed {
+		height: calc(100vh - 60vh);
+	}
+}

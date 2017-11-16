@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // imports from app
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -17,8 +17,7 @@ const routes: Routes = [
 	{path: 'home', loadChildren: './home/home.module#HomeModule'},
 	{path: 'login', loadChildren: './login/login.module#LoginModule'},
 	{path: '404', component: NotfoundComponent},
-	{path: '**', redirectTo: '404'},
-
+	{path: '**', redirectTo: '404'}
 ];
 
 export function HttpLoaderFactory ( http: HttpClient ) {

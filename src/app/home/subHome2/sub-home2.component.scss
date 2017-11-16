@@ -1,0 +1,34 @@
+@import '../../components/scss/variables';
+@import '../../components/scss/material/gps-theme';
+
+#suppliers-form {
+	h2 {
+		text-transform: uppercase;
+	}
+
+	.navbar {
+		a {
+			color: $black;
+			text-transform: uppercase;
+		}
+		-webkit-box-shadow: 0 0 7px -1px rgba(0,0,0,1);
+		-moz-box-shadow: 0 0 7px -1px rgba(0,0,0,1);
+		box-shadow: 0 0 7px -1px rgba(0,0,0,1);
+	}
+
+	.content {
+		min-height: 100vh;
+
+		.label {
+			font-family: $ubuntu-regular;
+			font-size: 16px;
+			margin: 20px 0 10px 0;
+			color: $grey1;
+			display: inline-block;
+		}
+	}
+
+	mat-form-field {
+		width: 100%;
+	}
+}

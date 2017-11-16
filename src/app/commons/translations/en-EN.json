@@ -1,7 +1,7 @@
 {
 	"app": "A simple Angular 5 starter kit with Webpack - Typescript - Material Design",
 	"login": {
-		"title": "An simple Angular 5 <b>starter kit</b>",
+		"title": "Welcome to the KISS Angular5 Starter KIT",
 		"id": {
 			"placeholder": "Login"
 		},

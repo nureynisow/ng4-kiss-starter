@@ -1,6 +1,6 @@
 @import '../components/scss/variables';
 
-kiss-login {
+#login {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -26,7 +26,6 @@ kiss-login {
 			font-size: 22px;
 			font-weight: 100;
 			text-transform: uppercase;
-			font-family: 'Open Sans', sans-serif;
 		}
 
 		.bottom {
@@ -40,8 +39,6 @@ kiss-login {
 			margin-top: 10px;
 			font-size: 11px;
 			text-decoration: none;
-			font-family: 'Open Sans', sans-serif;
-
 		}
 	}
 }

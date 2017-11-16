@@ -1,0 +1,53 @@
+@import '../scss/variables';
+
+#menu {
+	aside {
+		width: 240px;
+		background-color: $grey1;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		padding: 20px 30px 80px 30px;
+
+		.logo {
+			margin: auto;
+			height: 60px;
+			float: left;
+		}
+
+		h1 {
+			float: right;
+			color: $white;
+			padding-left: $padding-xs;
+			font-size: 15px;
+			font-weight: 600;
+		}
+
+		.bottom {
+			padding-left: 30px;
+			position: absolute;
+			bottom: 40px;
+			left: 0;
+			color: $white;
+			font-weight: normal;
+			margin-top: 10px;
+			font-size: 11px;
+			text-decoration: none;
+			width: 240px !important;
+		}
+
+		i {
+			font-size: 25px;
+			display: inline-block;
+			vertical-align: middle;
+			padding-right: $padding-xs;
+		}
+
+		span {
+			font-size: 20px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}

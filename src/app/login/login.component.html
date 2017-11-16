@@ -1,7 +1,7 @@
 <div id="login">
 	<aside class="login-panel text-center">
-		<img class="logo" src="../login/img/angular.png">
-		<h1 class="text-center" [innerHtml]="'login.title' | translate"></h1>
+		<img class="logo" src="commons/img/angular.png">
+		<h1 class="text-center-xs font FontUbuntuLight" [innerHtml]="'login.title' | translate"></h1>
 		<form novalidate [formGroup]="loginForm">
 			<mat-form-field>
 				<input matInput type="text" formControlName="login" placeholder="{{'login.id.placeholder' |translate}}">
@@ -10,7 +10,9 @@
 				<input matInput type="text" formControlName="password"
 								placeholder="{{'login.pwd.placeholder' | translate}}">
 			</mat-form-field>
-			<button type="submit" mat-raised-button color="primary" (click)="submitLoginForm()">Connexion</button>
+			<button type="submit" mat-raised-button style="margin-top: 10px;" class="gps-button-plain" color="primary"
+							(click)="submitLoginForm()">Connexion
+			</button>
 		</form>
 		<div class="bottom">
 			<a>{{'login.lost' | translate}}</a><br>

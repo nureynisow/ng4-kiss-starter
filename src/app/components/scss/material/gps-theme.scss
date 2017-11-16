@@ -2,7 +2,7 @@
 @import '../variables';
 
 $custom-typo: mat-typography-config(
-				$font-family: "Open Sans",
+				$font-family: quote($ubuntu-regular),
 				$body-1: mat-typography-level(14px, 24px, 400),
 				$input: mat-typography-level(24px, 1.125, 400)
 );
