@@ -8,5 +8,6 @@
 @include generate-colors(('orange1': $orange1));
 
 @include generate-colors(('green1': $green1));
+@include generate-colors(('green2': $green2));
 
 @include css-generator('background', 'background-color', ('transparent': transparent), ('xs': 0, 'sm': 768px, 'md': 768px, 'lg': 1200px));

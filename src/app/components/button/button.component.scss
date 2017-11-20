@@ -1,0 +1,25 @@
+@import "../scss/variables";
+
+.kiss-btn {
+	cursor: pointer;
+	min-height: 25px;
+	max-width: 100%;
+	padding: 7px 10px;
+	text-transform: uppercase;
+	background-color: $white-transparent;
+	border: 1px solid $grey1;
+	color: $grey1;
+	border-radius: 3px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	&-large {
+		min-height: 50px;
+		padding: 10px 15px;
+	}
+	&small {
+		min-height: 15px;
+		padding: 3px 7px;
+	}
+}
+
