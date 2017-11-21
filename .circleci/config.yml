@@ -3,9 +3,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:boron-browsers
-    branches:
-      only:
-        - master
     steps:
       - checkout
       - restore_cache:
