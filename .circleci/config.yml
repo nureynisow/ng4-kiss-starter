@@ -8,3 +8,9 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm run build
+      - deployment
+  deployment:
+    production:
+      branch: master
+      commands:
+        - surge --project ./dist --domain ng5-starter-kit.surge.sh
