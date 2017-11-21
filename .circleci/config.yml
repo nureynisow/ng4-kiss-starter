@@ -3,13 +3,19 @@ jobs:
   build:
     docker:
       - image: circleci/node:boron-browsers
+    branches:
+      only:
+        - master
     steps:
       - checkout
+      - restore_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm install
+      - save_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
       - run: npm run lint
       - run: npm run build
-  deployment:
-    production:
-      branch: master
-      commands:
-        - surge --project ./dist --domain ng5-starter-kit.surge.sh
+      - deploy:
+          command: surge --project ./dist --domain ng5-starter-kit.surge.sh
