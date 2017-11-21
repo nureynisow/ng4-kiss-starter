@@ -9,6 +9,7 @@
 		"lint": "tslint --project tsconfig.json 'src/**/*.ts'",
 		"clean": "rm -rf node_modules dist",
 		"test": "echo \"Error: no test specified\"",
+		"surge": "surge --project ./dist --domain ng5-starter-kit.surge.sh",
 		"postinstall": "./bin/setup-git-hooks"
 	},
 	"repository": {
