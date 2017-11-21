@@ -1,19 +1,15 @@
 @import '../../components/scss/variables';
-@import '../../components/scss/material/gps-theme';
 
 #suppliers-form {
-	h2 {
-		text-transform: uppercase;
-	}
-
+	@import '../../components/scss/material/material-forms';
 	.navbar {
 		a {
 			color: $black;
 			text-transform: uppercase;
 		}
-		-webkit-box-shadow: 0 0 7px -1px rgba(0,0,0,1);
-		-moz-box-shadow: 0 0 7px -1px rgba(0,0,0,1);
-		box-shadow: 0 0 7px -1px rgba(0,0,0,1);
+		-webkit-box-shadow: 0 0 7px -1px rgba(0, 0, 0, 1);
+		-moz-box-shadow: 0 0 7px -1px rgba(0, 0, 0, 1);
+		box-shadow: 0 0 7px -1px rgba(0, 0, 0, 1);
 	}
 
 	.content {
@@ -30,5 +26,8 @@
 
 	mat-form-field {
 		width: 100%;
+	}
+	.mat-ink-bar {
+		background-color: #A5C400 !important;
 	}
 }

@@ -1,104 +1,78 @@
 <div id="suppliers-form">
 	<div fxLayout="row" class="header background-green1-xs padding-sm-xs">
 		<div fxFlex="1 1 70%">
-			<h2 class="font FontUbuntuLight text-20-xs text-white-xs">{{'newSupplier.title' |translate}}</h2>
+			<h2 class="font FontUbuntuLight text-20-xs text-white-xs">{{'INFORMATION FORM' |translate}}</h2>
 		</div>
 		<div fxFlex="1 1 30%">
-			<div fxLayout="row">
-				<div fxFlex="1 1 50%" class="padding-right-sm-xs padding-left-sm-xs">
-					<kiss-button [text]="'newSupplier.cancel'|translate"
-									classes="kiss-btn-large"
-									bgColor="white"></kiss-button>
-				</div>
-				<div fxFlex="1 1 50%" class="padding-right-sm-xs padding-left-sm-xs">
-					<kiss-button [text]="'newSupplier.validate' |translate"
-									classes="kiss-btn-large"
-									bgColor="white"></kiss-button>
-				</div>
+			<div class="pull-right">
+				<kiss-button [text]="'cancel'|translate"
+								classes="kiss-btn-large margin-right-md-xs"
+								textColor="white"></kiss-button>
+				<kiss-button [text]="'validate' |translate"
+								classes="kiss-btn-large text-bold mat-elevation-z2"
+								textColor="#A5C400"
+								bgColor="white"></kiss-button>
 			</div>
 		</div>
 	</div>
-	<nav mat-tab-nav-bar class="background-white-xs navbar">
-		<a mat-tab-link
-						[routerLink]="home"
-						routerLinkActive #rla="routerLinkActive"
-						[active]="rla.isActive">
-			{{'newSupplier.tab1' |translate}}
-		</a>
-		<a mat-tab-link
-						[routerLink]="home"
-						routerLinkActive #rla="routerLinkActive"
-						[active]="rla.isActive">
-			{{'newSupplier.tab2' |translate}}
-		</a>
-		<a mat-tab-link
-						[routerLink]="home"
-						routerLinkActive #rla="routerLinkActive"
-						[active]="rla.isActive">
-			{{'newSupplier.tab3' |translate}}
-		</a>
-		<a mat-tab-link
-						[routerLink]="home"
-						routerLinkActive #rla="routerLinkActive"
-						[active]="rla.isActive">
-			{{'newSupplier.tab4' |translate}}
-		</a>
-		<a mat-tab-link
-						[routerLink]="home"
-						routerLinkActive #rla="routerLinkActive"
-						[active]="rla.isActive">
-			{{'newSupplier.tab4' |translate}}
-		</a>
+	<nav mat-tab-nav-bar color="accent" class="background-white-xs navbar">
+		<a mat-tab-link [active]="selectedTab === 'presentation'" (click)="goToAnchor('presentation')">
+			{{'Tab One' |translate}} </a>
+		<a mat-tab-link [active]="selectedTab === 'contact'" (click)="goToAnchor('contact')">
+			{{'Tab 2' |translate}} </a>
 	</nav>
 	<form novalidate [formGroup]="supplierForm">
 		<div class="content background-grey2-xs padding-sm-xs">
 			<div id="presentation" class="margin-bottom-lg-xs">
 				<div fxLayout="row">
 					<div fxFlex="1 1 100%">
-						<h2 class="font FontUbuntuLight text-20-xs text-grey1-xs">{{'newSupplier.tab1' |translate}}</h2>
-						<h3 class="font FontUbuntuLight text-14-xs text-grey1-xs">Identification</h3>
+						<h2 class="font FontUbuntuLight text-20-xs text-grey1-xs">{{'Tab 1 title' |translate}}</h2>
+						<h3 class="font FontUbuntuLight text-14-xs text-grey1-xs">{{'Tab 1 subtitle' |translate}}</h3>
 					</div>
 				</div>
 				<div fxLayout="row margin-top-md-xs">
 					<div fxFlex="1 1 50%" class="padding-right-md-xs">
 						<mat-form-field>
 							<input matInput class="text-grey1-xs" type="text" formControlName="name"
-											placeholder="{{'newSupplier.presentation.name.placeholder' |translate}}">
+											placeholder="{{'Name' |translate}}">
 						</mat-form-field>
 						<mat-form-field>
 							<input matInput type="text" formControlName="description"
-											placeholder="{{'newSupplier.presentation.description.placeholder' | translate}}">
+											placeholder="{{'Description' | translate}}">
 						</mat-form-field>
 						<div>
 							<label class="label">Priority Level</label><br>
-							<kiss-button [text]="'Preferred'|translate" faIcon="fa-thumbs-o-up"
-											classes="text-green2-xs"
-											textColor="color: #009688">
+							<kiss-button [text]="'Preferred'|translate" faIcon="fa-thumbs-o-up" classes="mat-elevation-z2"
+											textColor="#009688">
 							</kiss-button>
-							<button class="preferred-btn background-grey2-xs">Preferred</button>
-							<button class="second-choice-btn background-grey2-xs">Second Choice</button>
-							<button class="black-listed-btn background-grey2-xs">Black Listed</button>
+							<kiss-button [text]="'Second Choice'|translate" faIcon="fa-hand-o-right" classes="mat-elevation-z2"
+											textColor="#0079C6">
+							</kiss-button>
+							<kiss-button [text]="'Black Listed'|translate" faIcon="fa-hand-paper-o" classes="mat-elevation-z2">
+							</kiss-button>
 						</div>
 						<mat-form-field>
 							<input matInput type="text" formControlName="tag"
-											placeholder="{{'newSupplier.presentation.tag.placeholder' | translate}}">
+											placeholder="{{'Tags' | translate}}">
 						</mat-form-field>
 					</div>
 					<div fxFlex="1 1 50%" class="padding-left-md-xs">
 						<mat-form-field>
 							<input matInput class="text-grey1-xs" type="text" formControlName="legalName"
-											placeholder="{{'newSupplier.presentation.legalName.placeholder' |translate}}">
+											placeholder="{{'Legal name' |translate}}">
 						</mat-form-field>
 						<mat-form-field>
 							<input matInput type="text" formControlName="natId"
-											placeholder="{{'newSupplier.presentation.nationalIdentification.placeholder' | translate}}">
+											placeholder="{{'Pays' | translate}}">
 						</mat-form-field>
 						<div>
 							<label class="label">Classification</label><br>
-							<button class="simple-btn background-grey2-xs">Provider</button>
-							<button class="simple-btn background-grey2-xs">Agent</button>
-							<button class="simple-btn background-grey2-xs">Office</button>
-							<kiss-button [text]="'newSupplier.validate'|translate"></kiss-button>
+							<kiss-button [text]="'Provider'|translate">
+							</kiss-button>
+							<kiss-button [text]="'Agent'|translate">
+							</kiss-button>
+							<kiss-button [text]="'Office'|translate">
+							</kiss-button>
 						</div>
 					</div>
 				</div>
@@ -106,8 +80,8 @@
 			<div id="contact">
 				<div fxLayout="row">
 					<div fxFlex="1 1 100%">
-						<h2 class="font FontUbuntuLight text-20-xs text-grey1-xs">{{'newSupplier.tab2' |translate}}</h2>
-						<h3 class="font FontUbuntuLight text-14-xs text-grey1-xs">Supplier address</h3>
+						<h2 class="font FontUbuntuLight text-20-xs text-grey1-xs">{{'Tab 2' |translate}}</h2>
+						<h3 class="font FontUbuntuLight text-14-xs text-grey1-xs">Address</h3>
 					</div>
 				</div>
 				<div fxLayout="row margin-top-md-xs">

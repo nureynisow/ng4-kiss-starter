@@ -1,22 +1,22 @@
 <div id="menu">
-	<aside>
-		<div fxLayout="row" class="margin-bottom-md-xs">
-			<div fxFlex="1 1 100%">
-				<img class="logo" src="commons/img/angular.png">
-				<h1 class="font FontUbuntuLight margin-top-lg-xs">KISS-NG5</h1>
-			</div>
+	<aside class="text-white-xs">
+		<div fxLayout="row" fxLayoutAlign="center center" class="margin-bottom-md-xs">
+			<img class="logo" src="commons/img/angular.png">
+		</div>
+		<div fxLayout="row" fxLayoutAlign="center center" class="margin-bottom-md-xs">
+			<span class="text-18-xs">KISS Angular5 starter-kit</span>
 		</div>
 		<mat-nav-list>
 			<mat-list-item routerLink="/home">
 				<i class="fa fa-list-ul text-orange1-xs"></i>
 				<div class="mat-list-text">
-					<a matLine>Dashboard</a>
+					<a>Dashboard</a>
 				</div>
 			</mat-list-item>
 			<mat-list-item routerLink="/home/menu2">
 				<i class="fa fa-plus-square-o text-32-xs text-orange1-xs"></i>
 				<div class="mat-list-text">
-					<a matLine>Menu item 2</a>
+					<a>Menu item 2</a>
 				</div>
 			</mat-list-item>
 		</mat-nav-list>
@@ -25,7 +25,7 @@
 				<mat-list-item (click)="logout()">
 					<i class="fa fa-power-off text-orange1-xs"></i>
 					<div class="mat-list-text">
-						<a matLine><span>Logout</span></a>
+						<a><span>Logout</span></a>
 					</div>
 				</mat-list-item>
 			</mat-nav-list>

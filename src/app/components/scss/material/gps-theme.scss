@@ -78,6 +78,6 @@ $gps-theme-primary: mat-palette($gps-orange-palette);
 $gps-theme-accent: mat-palette($gps-green-palette, 500, 600, 700);
 $gps-theme-warn: mat-palette($mat-red);
 
-$custom-theme: mat-dark-theme($gps-theme-primary, $gps-theme-accent, $gps-theme-warn);
+$custom-theme: mat-light-theme($gps-theme-primary, $gps-theme-accent, $gps-theme-warn);
 
 @include angular-material-theme($custom-theme);

@@ -8,46 +8,24 @@
 		top: 0;
 		bottom: 0;
 		left: 0;
-		padding: 20px 30px 80px 30px;
+		padding: 20px;
 
 		.logo {
-			margin: auto;
-			height: 60px;
-			float: left;
+			height: 100px;
 		}
 
-		h1 {
-			float: right;
+		.mat-list-text {
 			color: $white;
-			padding-left: $padding-xs;
-			font-size: 15px;
-			font-weight: 600;
 		}
 
 		.bottom {
-			padding-left: 30px;
 			position: absolute;
-			bottom: 40px;
-			left: 0;
-			color: $white;
-			font-weight: normal;
-			margin-top: 10px;
-			font-size: 11px;
-			text-decoration: none;
-			width: 240px !important;
+			bottom: 30px;
+			width: inherit;
 		}
 
 		i {
 			font-size: 25px;
-			display: inline-block;
-			vertical-align: middle;
-			padding-right: $padding-xs;
-		}
-
-		span {
-			font-size: 20px;
-			display: inline-block;
-			vertical-align: middle;
 		}
 	}
 }

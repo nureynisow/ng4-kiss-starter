@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component( {
 	selector: 'kiss-home2',
@@ -9,8 +9,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class SubHome2 implements OnInit {
 
 	public supplierForm: FormGroup;
+	public selectedTab: string = 'presentation';
 
-	constructor ( private fb: FormBuilder) {
+	constructor ( private fb: FormBuilder ) {
 	}
 
 	ngOnInit (): void {
@@ -21,5 +22,10 @@ export class SubHome2 implements OnInit {
 			'natId': [ null, [ Validators.required ] ],
 			'tag': [ null, [ Validators.required ] ]
 		} );
+	}
+
+	goToAnchor ( id: string ) {
+		this.selectedTab = id;
+		document.querySelector( '#' + id ).scrollIntoView();
 	}
 }
